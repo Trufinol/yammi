@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+
+    <meta charset="utf-8">
+
+    <title>Title</title>
+    <meta name="description" content="">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+    <meta property="og:image" content="path/to/image.jpg">
+    <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+
+    <!-- Chrome, Firefox OS and Opera -->
+    <meta name="theme-color" content="#000">
+    <!-- Windows Phone -->
+    <meta name="msapplication-navbutton-color" content="#000">
+    <!-- iOS Safari -->
+    <meta name="apple-mobile-web-app-status-bar-style" content="#000">
+
+    <style>body { opacity: 0; overflow-x: hidden; } html { background-color: #fff; }</style>
+    <!-- UIkit CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.28/css/uikit.min.css" />
+    <link rel="stylesheet" href="css/main.min.css">
+</head>
+
+<body>
+
+    <div class="uk-section-primary">
+        <div uk-sticky="animation: uk-animation-slide-top; sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; cls-inactive: uk-navbar-transparent uk-light; top: 200">
+            <nav id="header" class="uk-navbar-container" uk-navbar>
+
+                <div class="uk-navbar-left">
+
+                    <ul class="uk-navbar-nav">
+                        <h1 class="uk-heading-hero"><a href="/" class="uk-navbar-item uk-logo">Yammi</a></h1>
+
+                    </div>
+                    <div class="uk-navbar-center">
+                        <span>Рюкзаки Yammi - тренд этого года</span>
+                    </div>
+                    <div class="uk-navbar-right">
+
+                        <ul class="uk-navbar-nav">
+                            <li><a href="#order" uk-scroll>Заказать</a></li>
+                            <li>
+                                <a href="#contacts">Контакты</a>
+                            </li>
+                        </ul>
+
+                    </div>
+
+                </nav>
+            </div>
+        </div>
+        <!-- SLIDER -->
+        <div class="main-slider owl-theme">
+            <div class="item uk-text-center">
+                <div class="slider-item" style="background-image: url('img/slide-1.jpg')">
+                    <div class="slider-text" uk-parallax="target: #test-easing; y: 100; easing: 0.6">Field for text</div>
+                </div>
+            </div>
+            <div class="item uk-text-center">
+                <div class="slider-item" style="background-image: url('img/slide-2.jpg')">
+                    <div class="slider-text" uk-parallax="target: #test-easing; y: 100; easing: 0.6">Field for text</div>
+                </div>
+            </div>
+            <div class="item uk-text-center">
+                <div class="slider-item" style="background-image: url('img/slide-3.jpg')">
+                    <div class="slider-text" uk-parallax="target: #test-easing; y: 100; easing: 0.6">Field for text</div>
+                </div>
+            </div>
+            <div class="item uk-text-center">
+                <div class="slider-item" style="background-image: url('img/slide-4.jpg')">
+                    <div class="slider-text" uk-parallax="target: #test-easing; y: 100; easing: 0.6">Field for text</div>
+                </div>
+            </div>
+            <div class="item uk-text-center">
+                <div class="slider-item" style="background-image: url('img/slide-5.jpg')">
+                    <div class="slider-text" uk-parallax="target: #test-easing; y: 100; easing: 0.6">Field for text</div>
+                </div>
+            </div>
+        </div>
+        <!-- SLIDER -->
+        <div class="uk-container">
+            <div id="order" class="uk-child-width-1-3@m" uk-grid>
+                <div>
+                    <div class="uk-card uk-card-default">
+                        <div class="uk-card-media-top">
+                            <div class="item-slider owl-theme">
+                                <div class="item">
+                                    <img src="img/red-1.jpg" alt="">
+                                </div>
+                                <div class="item">
+                                    <img src="img/red-2.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="uk-card-body _checkout-item">
+                            <h3 class="uk-card-title uk-text-center _item-color" data-color="red">Рюкзак красный</h3></h3>
+                            <div class="uk-button-group uk-width-1-1" uk-switcher="animation: uk-animation-slide-bottom-small">
+                                <button class="uk-button uk-button-primary uk-width-1-2 _item-size" data-size="big">Большой</button>
+                                <button class="uk-button uk-button-primary uk-width-1-2 _item-size" data-size="small">Маленький</button>
+                            </div>
+                            <ul class="uk-switcher uk-margin-top">
+                                <li>
+                                    <table class="uk-table uk-table-middle">
+                                        <tbody>
+                                            <tr>
+                                                <td>Размер</td>
+                                                <td>40 х 40 (см)</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Материал</td>
+                                                <td>Хлопок</td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>Цена</b></td>
+                                                <td class="_item-price" data-price="500"><b>500 грн.</b></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </li>
+                                <li>
+                                    <table class="uk-table uk-table-middle">
+                                        <tbody>
+                                            <tr>
+                                                <td>Размер</td>
+                                                <td>20 х 20 (см)</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Материал</td>
+                                                <td>Хлопок</td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>Цена</b></td>
+                                                <td class="_item-price" data-price="400"><b>400 грн.</b></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </li>
+                            </ul>
+                            <hr class="uk-divider-icon">
+                            <button class="uk-button uk-button-danger uk-width-1-1 uk-margin-small-bottom _buy-btn">Купить</button>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="uk-card uk-card-default">
+                        <div class="uk-card-media-top">
+                            <div class="item-slider owl-theme">
+                                <div class="item">
+                                    <img src="img/blue-1.jpg" alt="">
+                                </div>
+                                <div class="item">
+                                    <img src="img/blue-2.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="uk-card-body _checkout-item">
+                            <h3 class="uk-card-title uk-text-center _item-color" data-color="blue">Рюкзак синий</h3></h3>
+                            <div class="uk-button-group uk-width-1-1" uk-switcher="animation: uk-animation-slide-bottom-small">
+                                <button class="uk-button uk-button-primary uk-width-1-2 _item-size" data-size="big">Большой</button>
+                                <button class="uk-button uk-button-primary uk-width-1-2 _item-size" data-size="small">Маленький</button>
+                            </div>
+                            <ul class="uk-switcher uk-margin-top">
+                                <li>
+                                    <table class="uk-table uk-table-middle">
+                                        <tbody>
+                                            <tr>
+                                                <td>Размер</td>
+                                                <td>40 х 40 (см)</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Материал</td>
+                                                <td>Хлопок</td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>Цена</b></td>
+                                                <td class="_item-price" data-price="500"><b>500 грн.</b></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </li>
+                                <li>
+                                    <table class="uk-table uk-table-middle">
+                                        <tbody>
+                                            <tr>
+                                                <td>Размер</td>
+                                                <td>20 х 20 (см)</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Материал</td>
+                                                <td>Хлопок</td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>Цена</b></td>
+                                                <td class="_item-price" data-price="400"><b>400 грн.</b></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </li>
+                            </ul>
+                            <hr class="uk-divider-icon">
+                            <button class="uk-button uk-button-danger uk-width-1-1 uk-margin-small-bottom _buy-btn">Купить</button>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="uk-card uk-card-default">
+                        <div class="uk-card-media-top">
+                            <div class="item-slider owl-theme">
+                                <div class="item">
+                                    <img src="img/black-1.jpg" alt="">
+                                </div>
+                                <div class="item">
+                                    <img src="img/black-2.jpg" alt="">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="uk-card-body _checkout-item">
+                            <h3 class="uk-card-title uk-text-center _item-color" data-color="black">Рюкзак черный</h3></h3>
+                            <div class="uk-button-group uk-width-1-1" uk-switcher="animation: uk-animation-slide-bottom-small">
+                                <button class="uk-button uk-button-primary uk-width-1-2 _item-size" data-size="big">Большой</button>
+                                <button class="uk-button uk-button-primary uk-width-1-2 _item-size" data-size="small">Маленький</button>
+                            </div>
+                            <ul class="uk-switcher uk-margin-top">
+                                <li>
+                                    <table class="uk-table uk-table-middle">
+                                        <tbody>
+                                            <tr>
+                                                <td>Размер</td>
+                                                <td>40 х 40 (см)</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Материал</td>
+                                                <td>Хлопок</td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>Цена</b></td>
+                                                <td class="_item-price" data-price="500"><b>500 грн.</b></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </li>
+                                <li>
+                                    <table class="uk-table uk-table-middle">
+                                        <tbody>
+                                            <tr>
+                                                <td>Размер</td>
+                                                <td>20 х 20 (см)</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Материал</td>
+                                                <td>Хлопок</td>
+                                            </tr>
+                                            <tr>
+                                                <td><b>Цена</b></td>
+                                                <td class="_item-price" data-price="400"><b>400 грн.</b></td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </li>
+                            </ul>
+                            <hr class="uk-divider-icon">
+                            <button class="uk-button uk-button-danger uk-width-1-1 uk-margin-small-bottom _buy-btn">Купить</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+        <footer class="uk-light uk-background-secondary uk-margin-top uk-padding-small uk-grid-divider uk-child-width-expand@s uk-text-center" uk-grid>
+            <div><a href="mailto:example@mail.com" class="uk-button uk-button-text">
+                <span uk-icon="icon: mail;"></span> example@mail.com</a>
+            </div>
+            <div><a href="mailto:example@mail.com" class="uk-button uk-button-text">
+                <span uk-icon="icon: phone;"></span> +38 (050) 71-71-717</a>
+            </div>
+            <div class="uk-flex-center">
+                <ul class="uk-iconnav uk-flex uk-flex-center">
+                    <li><a href="" uk-icon="icon: facebook; ratio: 1.5"></a></li>
+                    <li><a href="" uk-icon="icon: instagram; ratio: 1.5"></a></li>
+                    <li><a href="" uk-icon="icon: youtube; ratio: 1.5"></a></li>
+                </ul>
+            </div>
+        </footer>
+        <!-- FOOTER -->
+        <!-- BUY-MODAL -->
+        <div id="buy-modal" uk-modal>
+            <div class="uk-modal-dialog">
+                <button class="uk-modal-close-default" type="button" uk-close></button>
+                <div class="uk-modal-header">
+                    <h2 class="uk-modal-title">Оформить заказ</h2>
+                </div>
+                <div class="uk-modal-body">
+                    <article class="uk-comment">
+                        <header class="uk-comment-header uk-grid-medium uk-flex-middle" uk-grid>
+                            <div class="uk-width-auto">
+                                <img class="uk-comment-avatar _order-pic" src="img/red-1.jpg" width="100" alt="">
+                            </div>
+                            <div class="uk-width-expand">
+                                <h4 class="uk-comment-title uk-margin-remove _order-name">Рюкзак красный</h4>
+                                <ul class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
+                                    <li class="_order-size">Большой</li>
+                                    <li class="_order-price">500 грн.</li>
+                                </ul>
+                            </div>
+                        </header>
+                        <!-- <div class="uk-comment-body">
+                            <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+                        </div> -->
+                    </article>
+                    <form class="uk-grid-small" uk-grid>
+
+                        <div class="uk-width-1-2@s">
+                            <label class="uk-form-label" for="name">Имя</label>
+                            <div class="uk-form-controls">
+                                <input class="uk-input" id="name" name="Name" type="text" placeholder="Тарас" />
+                            </div>
+                        </div>
+                        <div class="uk-width-1-2@s">
+                            <label class="uk-form-label" for="phone">Телефон</label>
+                            <div class="uk-form-controls">
+                                <input class="uk-input" id="phone" name="Phone" type="text" placeholder="8 0..." />
+                            </div>
+                        </div>
+                        <div class="uk-width-1-1">
+                            <label class="uk-form-label" for="comments">Комментарии</label>
+                            <div class="uk-form-controls">
+                                <textarea class="uk-textarea" id="comments" placeholder="Ваш комментарий..." ></textarea>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="uk-modal-footer uk-text-right">
+                    <button class="uk-button uk-button-default uk-modal-close" type="button">Отменить</button>
+                    <button class="uk-button uk-button-primary" type="button">Подтвердить</button>
+                </div>
+            </div>
+        </div>
+        <!-- BUY-MODAL -->
+        <!-- jQuery is required -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <div id="main" style="margin-left:100px"></div>
+        <!-- UIkit JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.28/js/uikit.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.28/js/uikit-icons.min.js"></script>
+        <script type="text/javascript" src="js/scripts.min.js"></script>
+
+        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js" charset="utf-8"></script> -->
+        <!--
+        <script id="simple-template" type="text/x-handlebars-template">
+        <h1>{{title}}</h1>
+        <p>
+        {{entry}}
+    </p>
+</script>
+<script type="text/javascript">
+//wait for page to load
+$(document).ready(function(){
+// Extract the text from the template .html() is the jquery helper method for that
+var raw_template = $('#simple-template').html();
+// Compile that into an handlebars template
+var template = Handlebars.compile(raw_template);
+// Retrieve the placeHolder where the Posts will be displayed
+var placeHolder = $("#main");
+// Fetch all Blog Posts data from server in JSON
+$.get("data.json",function(data,status,xhr){
+$.each(data,function(index,element){
+// Generate the HTML for each post
+var html = template(element);
+// Render the posts into the page
+placeHolder.append(html);
+});
+});
+});
+</script> -->
+</body>
+</html>
