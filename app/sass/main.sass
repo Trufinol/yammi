@@ -48,23 +48,32 @@ body
 	opacity: 1
 
 #header
-    background-color: #2196F3
+    background-color: #009FE3
+    .uk-logo
+        background: url(../img/logo2.png) no-repeat center
+        background-size: contain
+        width: 200px
+    span
+        color: #fff
 
 .main-slider
     .slider-item
         background-size: contain
-        background-color: #BBDEFB
-        height: 400px
+        // background-color: #BBDEFB
+        background-color: #fff
+        max-height: 50vh
+        height: 20rem
         background-repeat: no-repeat
         background-position: top
         position: relative
         .slider-text
             position: absolute
-            bottom: 150px
+            bottom: 50px
             max-width: 300px
             background-color: #fff
             right: 120px
             padding: 1rem
+            box-shadow: 0px 2px 4px rgba(0, 0, 0, .3)
 
 .slick-arrow
     z-index: 50
@@ -76,4 +85,5 @@ body
 .slick-prev:before, .slick-next:before
     font-size: 2.5rem
     text-shadow: 1px 1px 12px rgba(0,0,0,0.2)
+
 @import "media" // Всегда в конце

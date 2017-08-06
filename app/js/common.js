@@ -4,16 +4,14 @@ $(function() {
     $('.main-slider').slick({
         infinite: true,
         slidesToShow: 1,
-        responsive: false,
-        centerMode: true,
         autoplay: true,
-        autoplaySpeed: 5000
+        autoplaySpeed: 5000,
+        adaptiveHeight: true
     });
 
     // Backpack photos slider
     $('.item-slider').slick({
         slidesToShow: 1,
-        responsive: false,
     });
 
     // Set order details for modal checkout page
@@ -33,30 +31,38 @@ $(function() {
     });
 
     // Sumbit handler for modal checkout page
-    $('#buy-form').on('submit', function (e) {
+    $('#buy-form, #contact-form').on('submit', function (e) {
         e.preventDefault();
         var th = $(this);
-        var inputValues = {
-            'Имя': th.find('#name').val(),
-            'Еmail': th.find('#email').val(),
-            'Телефон': th.find('#phone').val(),
-            'Cooбщение': th.find('#comments').val(),
-            'Заказ': th.find('._order-name').text() + ', ' + th.find('._order-size').text(),
-            'Цена': th.find('._order-price').text(),
-            '_language': 'ru',
-            '_subject': 'Yammi - новое сообщение'
-        };
+        if (th.find('._order-name').length > 0) {
+            var inputValues = {
+                'Имя': th.find('#name').val(),
+                'Телефон': th.find('#phone').val(),
+                'Cooбщение': th.find('#comments').val(),
+                'Заказ': th.find('._order-name').text() + ', ' + th.find('._order-size').text(),
+                'Цена': th.find('._order-price').text(),
+                '_language': 'ru',
+                '_subject': 'Yammi - Заказ'
+            };
+        } else {
+            var inputValues = {
+                'Имя': th.find('#name').val(),
+                'Телефон': th.find('#phone').val(),
+                'Cooбщение': th.find('#comments').val(),
+                '_language': 'ru',
+                '_subject': 'Yammi - Сообщение'
+            };
+        }
+        $('._loader').show();
         $.ajax({
             type: "POST",
-            // url: "http://test.site/mail.php", //Change
-            // data: th.serialize()
-            url: "https://formspree.io/veseliy07@gmail.com", //Change
+            url: "https://formspree.io/veseliy07@gmail.com", //Change olgakravtsova08@gmail.com
             data: inputValues,
             dataType: "json"
         }).done(function() {
             UIkit.modal('#buy-modal').hide();
-                th.trigger("reset");
-                UIkit.notification("<div class='uk-text-center'><p><span class='uk-text-success' uk-icon='icon: happy'></span> Спасибо!</p><p>Ваша заявка успешно отправлена</p></div>");
+            th.trigger("reset");
+            UIkit.notification("<div class='uk-text-center'><p><span class='uk-text-success' uk-icon='icon: happy'></span> Спасибо!</p><p>Ваша заявка успешно отправлена</p></div>");
         }).fail(function () {
             UIkit.notification("<div class='uk-text-center'><p><span class='uk-text-danger' uk-icon='icon: ban'></span> Ой!</p><p>Мы не смогли отправить вашу форму...</p><p>Попробуйте позже</p></div>");
         });
@@ -66,6 +72,6 @@ $(function() {
     $(document).ajaxStart(function () {
         $('#loader').show();
     }).ajaxStop(function () {
-        $('#loader').hide();
+        $('#loader, ._loader').hide();
     });
 });
