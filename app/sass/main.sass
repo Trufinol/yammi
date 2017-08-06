@@ -66,4 +66,14 @@ body
             right: 120px
             padding: 1rem
 
+.slick-arrow
+    z-index: 50
+    &.slick-prev
+        left: 5px
+    &.slick-next
+        right: 25px
+
+.slick-prev:before, .slick-next:before
+    font-size: 2.5rem
+    text-shadow: 1px 1px 12px rgba(0,0,0,0.2)
 @import "media" // Всегда в конце

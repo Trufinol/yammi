@@ -27,6 +27,8 @@
     <style>body { opacity: 0; overflow-x: hidden; } html { background-color: #fff; }</style>
     <!-- UIkit CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.28/css/uikit.min.css" />
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css"/>
     <link rel="stylesheet" href="css/main.min.css">
 </head>
 
@@ -60,28 +62,28 @@
             </div>
         </div>
         <!-- SLIDER -->
-        <div class="main-slider owl-theme">
-            <div class="item uk-text-center">
+        <div class="main-slider">
+            <div class="uk-text-center">
                 <div class="slider-item" style="background-image: url('img/slide-1.jpg')">
                     <div class="slider-text" uk-parallax="target: #test-easing; y: 100; easing: 0.6">Field for text</div>
                 </div>
             </div>
-            <div class="item uk-text-center">
+            <div class="uk-text-center">
                 <div class="slider-item" style="background-image: url('img/slide-2.jpg')">
                     <div class="slider-text" uk-parallax="target: #test-easing; y: 100; easing: 0.6">Field for text</div>
                 </div>
             </div>
-            <div class="item uk-text-center">
+            <div class="uk-text-center">
                 <div class="slider-item" style="background-image: url('img/slide-3.jpg')">
                     <div class="slider-text" uk-parallax="target: #test-easing; y: 100; easing: 0.6">Field for text</div>
                 </div>
             </div>
-            <div class="item uk-text-center">
+            <div class="uk-text-center">
                 <div class="slider-item" style="background-image: url('img/slide-4.jpg')">
                     <div class="slider-text" uk-parallax="target: #test-easing; y: 100; easing: 0.6">Field for text</div>
                 </div>
             </div>
-            <div class="item uk-text-center">
+            <div class="uk-text-center">
                 <div class="slider-item" style="background-image: url('img/slide-5.jpg')">
                     <div class="slider-text" uk-parallax="target: #test-easing; y: 100; easing: 0.6">Field for text</div>
                 </div>
@@ -89,24 +91,24 @@
         </div>
         <!-- SLIDER -->
         <div class="uk-container">
-            <div id="order" class="uk-child-width-1-3@m" uk-grid>
+            <div class="uk-child-width-1-3@m" uk-grid>
                 <div>
-                    <div class="uk-card uk-card-default">
+                    <div class="uk-card uk-card-default _checkout-item">
                         <div class="uk-card-media-top">
                             <div class="item-slider owl-theme">
                                 <div class="item">
-                                    <img src="img/red-1.jpg" alt="">
+                                    <img class="_item-pic" src="img/red-1.jpg" alt="">
                                 </div>
                                 <div class="item">
                                     <img src="img/red-2.jpg" alt="">
                                 </div>
                             </div>
                         </div>
-                        <div class="uk-card-body _checkout-item">
-                            <h3 class="uk-card-title uk-text-center _item-color" data-color="red">Рюкзак красный</h3></h3>
+                        <div class="uk-card-body">
+                            <h3 class="uk-card-title uk-text-center _item-color">Рюкзак красный</h3></h3>
                             <div class="uk-button-group uk-width-1-1" uk-switcher="animation: uk-animation-slide-bottom-small">
-                                <button class="uk-button uk-button-primary uk-width-1-2 _item-size" data-size="big">Большой</button>
-                                <button class="uk-button uk-button-primary uk-width-1-2 _item-size" data-size="small">Маленький</button>
+                                <button class="uk-button uk-button-primary uk-width-1-2 _item-size">Большой</button>
+                                <button class="uk-button uk-button-primary uk-width-1-2 _item-size">Маленький</button>
                             </div>
                             <ul class="uk-switcher uk-margin-top">
                                 <li>
@@ -122,7 +124,7 @@
                                             </tr>
                                             <tr>
                                                 <td><b>Цена</b></td>
-                                                <td class="_item-price" data-price="500"><b>500 грн.</b></td>
+                                                <td class="_item-price"><b>500 грн.</b></td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -140,7 +142,7 @@
                                             </tr>
                                             <tr>
                                                 <td><b>Цена</b></td>
-                                                <td class="_item-price" data-price="400"><b>400 грн.</b></td>
+                                                <td class="_item-price"><b>400 грн.</b></td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -152,22 +154,22 @@
                     </div>
                 </div>
                 <div>
-                    <div class="uk-card uk-card-default">
+                    <div class="uk-card uk-card-default _checkout-item">
                         <div class="uk-card-media-top">
                             <div class="item-slider owl-theme">
                                 <div class="item">
-                                    <img src="img/blue-1.jpg" alt="">
+                                    <img class="_item-pic" src="img/blue-1.jpg" alt="">
                                 </div>
                                 <div class="item">
                                     <img src="img/blue-2.jpg" alt="">
                                 </div>
                             </div>
                         </div>
-                        <div class="uk-card-body _checkout-item">
-                            <h3 class="uk-card-title uk-text-center _item-color" data-color="blue">Рюкзак синий</h3></h3>
+                        <div class="uk-card-body">
+                            <h3 class="uk-card-title uk-text-center _item-color">Рюкзак синий</h3></h3>
                             <div class="uk-button-group uk-width-1-1" uk-switcher="animation: uk-animation-slide-bottom-small">
-                                <button class="uk-button uk-button-primary uk-width-1-2 _item-size" data-size="big">Большой</button>
-                                <button class="uk-button uk-button-primary uk-width-1-2 _item-size" data-size="small">Маленький</button>
+                                <button class="uk-button uk-button-primary uk-width-1-2 _item-size">Большой</button>
+                                <button class="uk-button uk-button-primary uk-width-1-2 _item-size">Маленький</button>
                             </div>
                             <ul class="uk-switcher uk-margin-top">
                                 <li>
@@ -183,7 +185,7 @@
                                             </tr>
                                             <tr>
                                                 <td><b>Цена</b></td>
-                                                <td class="_item-price" data-price="500"><b>500 грн.</b></td>
+                                                <td class="_item-price"><b>500 грн.</b></td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -201,7 +203,7 @@
                                             </tr>
                                             <tr>
                                                 <td><b>Цена</b></td>
-                                                <td class="_item-price" data-price="400"><b>400 грн.</b></td>
+                                                <td class="_item-price"><b>400 грн.</b></td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -213,22 +215,22 @@
                     </div>
                 </div>
                 <div>
-                    <div class="uk-card uk-card-default">
+                    <div class="uk-card uk-card-default _checkout-item">
                         <div class="uk-card-media-top">
                             <div class="item-slider owl-theme">
                                 <div class="item">
-                                    <img src="img/black-1.jpg" alt="">
+                                    <img class="_item-pic" src="img/black-1.jpg" alt="">
                                 </div>
                                 <div class="item">
                                     <img src="img/black-2.jpg" alt="">
                                 </div>
                             </div>
                         </div>
-                        <div class="uk-card-body _checkout-item">
-                            <h3 class="uk-card-title uk-text-center _item-color" data-color="black">Рюкзак черный</h3></h3>
+                        <div class="uk-card-body">
+                            <h3 class="uk-card-title uk-text-center _item-color">Рюкзак черный</h3></h3>
                             <div class="uk-button-group uk-width-1-1" uk-switcher="animation: uk-animation-slide-bottom-small">
-                                <button class="uk-button uk-button-primary uk-width-1-2 _item-size" data-size="big">Большой</button>
-                                <button class="uk-button uk-button-primary uk-width-1-2 _item-size" data-size="small">Маленький</button>
+                                <button class="uk-button uk-button-primary uk-width-1-2 _item-size">Большой</button>
+                                <button class="uk-button uk-button-primary uk-width-1-2 _item-size">Маленький</button>
                             </div>
                             <ul class="uk-switcher uk-margin-top">
                                 <li>
@@ -244,7 +246,7 @@
                                             </tr>
                                             <tr>
                                                 <td><b>Цена</b></td>
-                                                <td class="_item-price" data-price="500"><b>500 грн.</b></td>
+                                                <td class="_item-price"><b>500 грн.</b></td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -262,7 +264,7 @@
                                             </tr>
                                             <tr>
                                                 <td><b>Цена</b></td>
-                                                <td class="_item-price" data-price="400"><b>400 грн.</b></td>
+                                                <td class="_item-price"><b>400 грн.</b></td>
                                             </tr>
                                         </tbody>
                                     </table>
@@ -281,7 +283,7 @@
             <div><a href="mailto:example@mail.com" class="uk-button uk-button-text">
                 <span uk-icon="icon: mail;"></span> example@mail.com</a>
             </div>
-            <div><a href="mailto:example@mail.com" class="uk-button uk-button-text">
+            <div><a href="tel:+38 (050) 71-71-717" class="uk-button uk-button-text">
                 <span uk-icon="icon: phone;"></span> +38 (050) 71-71-717</a>
             </div>
             <div class="uk-flex-center">
@@ -294,56 +296,69 @@
         </footer>
         <!-- FOOTER -->
         <!-- BUY-MODAL -->
-        <div id="buy-modal" uk-modal>
+        <div id="buy-modal" uk-modal uk-inline>
             <div class="uk-modal-dialog">
                 <button class="uk-modal-close-default" type="button" uk-close></button>
                 <div class="uk-modal-header">
                     <h2 class="uk-modal-title">Оформить заказ</h2>
                 </div>
                 <div class="uk-modal-body">
-                    <article class="uk-comment">
-                        <header class="uk-comment-header uk-grid-medium uk-flex-middle" uk-grid>
-                            <div class="uk-width-auto">
-                                <img class="uk-comment-avatar _order-pic" src="img/red-1.jpg" width="100" alt="">
-                            </div>
-                            <div class="uk-width-expand">
-                                <h4 class="uk-comment-title uk-margin-remove _order-name">Рюкзак красный</h4>
-                                <ul class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
-                                    <li class="_order-size">Большой</li>
-                                    <li class="_order-price">500 грн.</li>
-                                </ul>
-                            </div>
-                        </header>
-                        <!-- <div class="uk-comment-body">
+                    <form id="buy-form" method="post">
+                        <input type="hidden" name="_language" value="ru" />
+                        <input type="hidden" name="_subject" value="Yammi - новое сообщение" />
+                        <!-- <input type="hidden" name="_cc" value="another@email.com,yetanother@email.com" /> -->
+                        <article class="uk-comment">
+                            <header class="uk-comment-header uk-grid-medium uk-flex-middle" uk-grid>
+                                <div class="uk-width-auto">
+                                    <img class="uk-comment-avatar _order-pic" src="img/red-1.jpg" width="100" alt="">
+                                </div>
+                                <div class="uk-width-expand">
+                                    <h4 class="uk-comment-title uk-margin-remove _order-name"></h4>
+                                    <ul class="uk-comment-meta uk-subnav uk-subnav-divider uk-margin-remove-top">
+                                        <li class="_order-size"></li>
+                                        <li class="_order-price"></li>
+                                    </ul>
+                                </div>
+                            </header>
+                            <!-- <div class="uk-comment-body">
                             <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
                         </div> -->
                     </article>
-                    <form class="uk-grid-small" uk-grid>
+                    <div class="uk-grid-small" uk-grid>
 
-                        <div class="uk-width-1-2@s">
+                        <div class="uk-width-1-3@s">
                             <label class="uk-form-label" for="name">Имя</label>
                             <div class="uk-form-controls">
-                                <input class="uk-input" id="name" name="Name" type="text" placeholder="Тарас" />
+                                <input class="uk-input" id="name" name="Name" type="text" placeholder="Тарас" required />
                             </div>
                         </div>
-                        <div class="uk-width-1-2@s">
+                        <div class="uk-width-1-3@s">
                             <label class="uk-form-label" for="phone">Телефон</label>
                             <div class="uk-form-controls">
-                                <input class="uk-input" id="phone" name="Phone" type="text" placeholder="8 0..." />
+                                <input class="uk-input" id="phone" name="Phone" type="text" placeholder="8 0..." required />
+                            </div>
+                        </div>
+                        <div class="uk-width-1-3@s">
+                            <label class="uk-form-label" for="phone">E-mail</label>
+                            <div class="uk-form-controls">
+                                <input class="uk-input" id="email" name="Email" type="email" placeholder="example@mail.com" required />
                             </div>
                         </div>
                         <div class="uk-width-1-1">
                             <label class="uk-form-label" for="comments">Комментарии</label>
                             <div class="uk-form-controls">
-                                <textarea class="uk-textarea" id="comments" placeholder="Ваш комментарий..." ></textarea>
+                                <textarea class="uk-textarea" id="comments" name="Message" placeholder="Ваш комментарий..." ></textarea>
                             </div>
                         </div>
-                    </form>
-                </div>
-                <div class="uk-modal-footer uk-text-right">
-                    <button class="uk-button uk-button-default uk-modal-close" type="button">Отменить</button>
-                    <button class="uk-button uk-button-primary" type="button">Подтвердить</button>
-                </div>
+                    </div>
+                    <div class="uk-modal-footer uk-text-right">
+                        <button class="uk-button uk-button-default uk-modal-close" type="reset">Отменить</button>
+                        <button class="uk-button uk-button-primary" id="submit-btn" type="submit">Подтвердить</button>
+                    </div>
+                </form>
+            </div>
+            <div id="loader" class="uk-position-cover uk-overlay uk-overlay-default" style="display: none;">
+                <div class="uk-position-center" uk-spinner></div>
             </div>
         </div>
         <!-- BUY-MODAL -->
@@ -354,6 +369,9 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.28/js/uikit.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.0-beta.28/js/uikit-icons.min.js"></script>
         <script type="text/javascript" src="js/scripts.min.js"></script>
+
+
+        <script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>
 
         <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.10/handlebars.min.js" charset="utf-8"></script> -->
         <!--
