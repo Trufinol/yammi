@@ -4,6 +4,7 @@ $(function() {
     $('.main-slider').slick({
         infinite: true,
         slidesToShow: 1,
+        // centerMode: true,
         autoplay: true,
         autoplaySpeed: 5000,
         adaptiveHeight: true
@@ -17,14 +18,12 @@ $(function() {
     // Set order details for modal checkout page
     $('._checkout-item ._buy-btn').on('click', function() {
         var item = $(this).closest('._checkout-item');
-        var itemSize = item.find('._item-size.uk-active').text();
-        var itemColor = item.find('._item-color').text();
-        var itemPrice = item.find('.uk-active ._item-price').text();
+        var itemName = item.find('._item-name').text();
+        var itemPrice = item.find('._item-price').text();
         var itemImage = item.find('._item-pic')[0].src;
 
         var modal = $('#buy-modal');
-        modal.find('._order-size').text(itemSize);
-        modal.find('._order-name').text(itemColor);
+        modal.find('._order-name').text(itemName);
         modal.find('._order-price').text(itemPrice);
         modal.find('._order-pic').attr('src', itemImage);
         UIkit.modal('#buy-modal').show()
@@ -39,7 +38,7 @@ $(function() {
                 'Имя': th.find('#name').val(),
                 'Телефон': th.find('#phone').val(),
                 'Cooбщение': th.find('#comments').val(),
-                'Заказ': th.find('._order-name').text() + ', ' + th.find('._order-size').text(),
+                'Заказ': th.find('._order-name').text(),
                 'Цена': th.find('._order-price').text(),
                 '_language': 'ru',
                 '_subject': 'Yammi - Заказ'

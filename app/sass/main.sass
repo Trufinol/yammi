@@ -55,25 +55,30 @@ body
         width: 200px
     span
         color: #fff
-
+#mobile-menu
+    background: #009fe3
+    padding: 1rem
 .main-slider
+    width: auto
     .slider-item
-        background-size: contain
-        // background-color: #BBDEFB
-        background-color: #fff
-        max-height: 50vh
-        height: 20rem
-        background-repeat: no-repeat
-        background-position: top
+        // max-height: 50vh
+        height: 30rem
         position: relative
+        img
+            margin: 0 auto
+        &.slick-current .slider-text
+            opacity: 1
         .slider-text
+            z-index: 999
             position: absolute
             bottom: 50px
-            max-width: 300px
-            background-color: #fff
+            max-width: 500px
+            background-color: rgba(255,255,255,.8)
+            opacity: 0
             right: 120px
             padding: 1rem
             box-shadow: 0px 2px 4px rgba(0, 0, 0, .3)
+            transition: opacity ease-in .4s
 
 .slick-arrow
     z-index: 50
@@ -85,5 +90,6 @@ body
 .slick-prev:before, .slick-next:before
     font-size: 2.5rem
     text-shadow: 1px 1px 12px rgba(0,0,0,0.2)
-
+footer
+    background-color: #f0506e
 @import "media" // Всегда в конце
