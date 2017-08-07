@@ -60,9 +60,9 @@ body
     padding: 1rem
 .main-slider
     width: auto
+    &+ .uk-overlay
+        padding: 1rem
     .slider-item
-        // max-height: 50vh
-        height: 30rem
         position: relative
         img
             margin: 0 auto
@@ -81,7 +81,7 @@ body
             transition: opacity ease-in .4s
 
 .slick-arrow
-    z-index: 50
+    z-index: 1
     &.slick-prev
         left: 5px
     &.slick-next
@@ -92,4 +92,6 @@ body
     text-shadow: 1px 1px 12px rgba(0,0,0,0.2)
 footer
     background-color: #f0506e
+    .uk-iconnav li:first-child
+        padding-left: 0
 @import "media" // Всегда в конце
