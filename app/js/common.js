@@ -1,19 +1,26 @@
 $(function() {
     var placeHolder = $("#root");
     var template = $('#template').html();
+    Handlebars.registerHelper('if_eq', function(a, b, opts) {
+        if (a == b) {
+            return opts.fn(this);
+        } else {
+            return opts.inverse(this);
+        }
+    });
     $.get("text.json", function(data, status, xhr) {
         var stone = Handlebars.compile(template)(data);
         placeHolder.html(stone);
         // Full-width slider
-    }).done(function () {
-        setTimeout(function () {
+    }).done(function() {
+        setTimeout(function() {
             $('.main-slider').slick({
                 infinite: true,
                 slidesToShow: 1,
                 // centerMode: true,
                 autoplay: true,
                 autoplaySpeed: 5000,
-                adaptiveHeight: true
+                // adaptiveHeight: true
             });
 
             // Backpack photos slider
@@ -37,7 +44,7 @@ $(function() {
         });
 
         // Sumbit handler for modal checkout page
-        $('#buy-form, #contact-form').on('submit', function (e) {
+        $('#buy-form, #contact-form').on('submit', function(e) {
             e.preventDefault();
             var th = $(this);
             if (th.find('._order-name').length > 0) {
@@ -69,15 +76,15 @@ $(function() {
                 UIkit.modal('#buy-modal').hide();
                 th.trigger("reset");
                 UIkit.notification("<div class='uk-text-center'><p><span class='uk-text-success' uk-icon='icon: happy'></span> Спасибо!</p><p>Ваша заявка успешно отправлена</p></div>");
-            }).fail(function () {
+            }).fail(function() {
                 UIkit.notification("<div class='uk-text-center'><p><span class='uk-text-danger' uk-icon='icon: ban'></span> Ой!</p><p>Мы не смогли отправить вашу форму...</p><p>Попробуйте позже</p></div>");
             });
         });
 
         // Spinner for modal loader
-        $(document).ajaxStart(function () {
+        $(document).ajaxStart(function() {
             $('#loader').show();
-        }).ajaxStop(function () {
+        }).ajaxStop(function() {
             $('#loader, ._loader').hide();
         });
     });
